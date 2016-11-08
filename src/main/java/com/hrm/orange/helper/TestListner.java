@@ -37,9 +37,6 @@ public class TestListner implements ITestListener
 		//provides a formatting string for your eventual output
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat sdf1 = new SimpleDateFormat("YYYY-MM-DD HH-mm-ss");
-		System.out.println("In the method");
-		System.out.println("Your Test Method name is: " +result.getMethod().getMethodName());
-		
 		Object currentClass = result.getInstance();
         WebDriver webDriver = ((AppTest)currentClass).getDriver();
 		
