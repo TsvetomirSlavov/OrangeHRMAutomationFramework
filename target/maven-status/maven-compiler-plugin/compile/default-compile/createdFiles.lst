@@ -1,8 +1,7 @@
-com\hrm\orange\base\App.class
-com\hrm\orange\pages\LoginPage.class
-com\hrm\orange\pages\LeavePage.class
-com\hrm\orange\helper\UtilityFunction.class
-com\hrm\orange\helper\ExcelFileReader.class
-com\hrm\orange\pages\ApproveLeave.class
 com\hrm\orange\base\CommonFunctions.class
+com\hrm\orange\pages\LeavePage.class
 com\hrm\orange\pages\Dashboard.class
+com\hrm\orange\helper\ExcelFileReader.class
+com\hrm\orange\base\App.class
+com\hrm\orange\pages\ApproveLeave.class
+com\hrm\orange\pages\LoginPage.class

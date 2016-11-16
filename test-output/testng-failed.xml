@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="2" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="appURL" value="http://127.0.0.1/orangehrm-3.3.1/symfony/web/index.php/auth/login"/>
+  <parameter name="browserType" value="chrome"/>
   <listeners>
     <listener class-name="com.hrm.orange.helper.TestListner"/>
   </listeners>
@@ -8,13 +10,10 @@
     <classes>
       <class name="com.hrm.orange.test.AppTest">
         <methods>
-          <include name="beforeMethod"/>
-          <include name="cleanUp"/>
-          <include name="afterClass"/>
-          <include name="beforeTest"/>
-          <include name="beforeClass"/>
+          <include name="initializeTestBaseSetup"/>
           <include name="VerifyLoginSuccess"/>
-          <include name="afterTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- com.hrm.orange.test.AppTest -->
     </classes>

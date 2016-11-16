@@ -1,7 +1,6 @@
 package com.hrm.orange.test;
 
 import org.testng.Assert;
-import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 import com.hrm.orange.base.CommonFunctions;
@@ -10,20 +9,23 @@ import com.hrm.orange.pages.ApproveLeave;
 import com.hrm.orange.pages.Dashboard;
 import com.hrm.orange.pages.LeavePage;
 import com.hrm.orange.pages.LoginPage;
-
 import org.openqa.selenium.*;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class AppTest
+public class AppTest extends OrangeBaseTest
 {
-
-	WebDriver driver;
+	private WebDriver driver;
+	@BeforeMethod
+	public void setup(){
+		driver = getDriver();
+	}
+	
 
 	@Test
 	public void VerifyLoginSuccess() throws Exception
 	{
 
-		driver = new FirefoxDriver();
+		
+		//driver = new FirefoxDriver();
 		CommonFunctions cfunction = new CommonFunctions(driver);
 		LoginPage login = new LoginPage(driver);
 		Dashboard dashboard = new Dashboard(driver);
@@ -35,25 +37,19 @@ public class AppTest
 		String ActualText = dashboard.GetDashboardText();
 		Assert.assertEquals(ActualText, "Dashboard");
 		cfunction.LogOut();
-		System.out.println("Test Case with ID:" +Thread.currentThread().getId());
-		driver.close();
-		driver.quit();
-
+		//driver.close();
+		//driver.quit();
+		
+		
 	}
 
-	@AfterTest
-	public void afterTest()
+
+
+	@Test(enabled=true)
+	public void VerifyLoginFailure() throws Exception
 	{
-
-
-	}
-
-	@Test
-	public void VerifyLoginFailure()
-	{
-		try
-		{
-			driver = new FirefoxDriver();
+			
+			//driver = new FirefoxDriver();
 			LoginPage login = new LoginPage(driver);
 			ExcelFileReader excel = new ExcelFileReader();
 			String file = ".\\src\\test\\resources\\testdata\\TestAuto.xls";
@@ -62,12 +58,9 @@ public class AppTest
 			login.LoginToHRM(userName, password);
 			String ActualText = login.GetLoginFailureMessage();
 			Assert.assertEquals(ActualText, "Invalid credentials");
-			System.out.println("Test Case with ID:" +Thread.currentThread().getId());
-			driver.close();
-			driver.quit();
-		} catch (Exception e)
-		{
-		}
+			//driver.close();
+			//driver.quit();
+
 
 	}
 
@@ -84,7 +77,7 @@ public class AppTest
 	@Test(dataProvider = "test1", enabled = false)
 	public void VerifyApplyLeave(String leaveType, String fromDate, String toDate, String comment) throws Exception
 	{
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		LoginPage login = new LoginPage(driver);
 		Dashboard dashboard = new Dashboard(driver);
 		LeavePage leavepage = new LeavePage(driver);
@@ -98,7 +91,7 @@ public class AppTest
 	@Test(enabled = false)
 	public void verifymy()
 	{
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
 		LoginPage login = new LoginPage(driver);
 		Dashboard dashboard = new Dashboard(driver);
 		// LeavePage leavepage = new LeavePage(driver);
@@ -111,41 +104,5 @@ public class AppTest
 
 	}
 
-	@BeforeMethod
-	public void beforeMethod()
-	{
-	}
-
-	@AfterMethod
-	public void cleanUp(ITestResult result)
-	{
-		
-
-	}
-
-	@BeforeClass
-	public void beforeClass()
-	{
-
-		// extent =new ExtentReports("E:\\Report\\MyReport.html");
-
-	}
-
-	@AfterClass
-	public void afterClass()
-	{
-	}
-
-	@BeforeTest
-	public void beforeTest()
-	{
-
-	}
-
-	public WebDriver getDriver()
-	{
-		// TODO Auto-generated method stub
-		return driver;
-	}
 
 }

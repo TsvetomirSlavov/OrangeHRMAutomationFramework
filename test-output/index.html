@@ -141,15 +141,17 @@
                   <a name="VerifyLoginSuccess">
                   </a> <!-- VerifyLoginSuccess -->
                   <span class="method-name">VerifyLoginSuccess</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[text()=&apos;Dashboard&apos;]&quot;}
-Command duration or timeout: 40 milliseconds
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[text()=&apos;Dashboard&apos;]&quot;}
+  (Session info: chrome=54.0.2840.99)
+  (Driver info: chromedriver=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed),platform=Windows NT 6.1.7601 SP1 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 2.04 seconds
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;clogeny-PC&apos;, ip: &apos;192.168.101.61&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
+System info: host: &apos;clogeny-PC&apos;, ip: &apos;192.168.100.117&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_111&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.25.426923 (0390b88869384d6eb0d5d09729679f934aab9eed), userDataDir=C:\Users\clogeny\AppData\Local\Temp\scoped_dir7704_20380}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=54.0.2840.99, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 21f1e7d1cdefb67cb53988484b1bb52f
 *** Element info: {Using=xpath, value=//h1[text()=&apos;Dashboard&apos;]}
-Session ID: 30202804-5c49-4491-8084-5010b872c114
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cssSelectorsEnabled=true, databaseEnabled=true, browserName=firefox, handlesAlerts=true, nativeEvents=false, webStorageEnabled=true, rotatable=false, locationContextEnabled=true, applicationCacheEnabled=true, takesScreenshot=true, version=46.0}]
 	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
 	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
@@ -158,17 +160,7 @@ Capabilities [{platform=WINDOWS, acceptSslCerts=true, javascriptEnabled=true, cs
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
 	at com.hrm.orange.pages.Dashboard.GetDashboardText(Dashboard.java:26)
-	at com.hrm.orange.test.AppTest.VerifyLoginSuccess(AppTest.java:36)
-Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//h1[text()=&apos;Dashboard&apos;]&quot;}
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;2.52.0&apos;, revision: &apos;4c2593cfc3689a7fcd7be52549167e5ccc93ad28&apos;, time: &apos;2016-02-11 11:22:43&apos;
-System info: host: &apos;clogeny-PC&apos;, ip: &apos;192.168.101.61&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.7.0_79&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElementInternal_(file:///C:/Users/clogeny/AppData/Local/Temp/anonymous8551533217938566847webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10723)
-	at &lt;anonymous class&gt;.FirefoxDriver.prototype.findElement(file:///C:/Users/clogeny/AppData/Local/Temp/anonymous8551533217938566847webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10732)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/clogeny/AppData/Local/Temp/anonymous8551533217938566847webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12614)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_(file:///C:/Users/clogeny/AppData/Local/Temp/anonymous8551533217938566847webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12619)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.execute/&lt;(file:///C:/Users/clogeny/AppData/Local/Temp/anonymous8551533217938566847webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12561)
+	at com.hrm.orange.test.AppTest.VerifyLoginSuccess(AppTest.java:38)
 ... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
@@ -200,6 +192,8 @@ Driver info: driver.version: unknown
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite thread-count=&quot;2&quot; guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;appURL&quot; value=&quot;http://127.0.0.1/orangehrm-3.3.1/symfony/web/index.php/auth/login&quot;/&gt;
+  &lt;parameter name=&quot;browserType&quot; value=&quot;chrome&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;com.hrm.orange.helper.TestListner&quot;/&gt;
   &lt;/listeners&gt;
@@ -249,16 +243,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'VerifyLoginFailure')
 data.setCell(0, 2, 'com.hrm.orange.test.AppTest')
-data.setCell(0, 3, 11572);
+data.setCell(0, 3, 4400);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'VerifyLoginSuccess')
 data.setCell(1, 2, 'com.hrm.orange.test.AppTest')
-data.setCell(1, 3, 10014);
+data.setCell(1, 3, 2608);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
+              <span class="suite-total-time">Total running time: 7 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -269,6 +263,25 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">VerifyLoginFailure</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Entered username</span>
+                <span class="reporter-method-output">Entered password</span>
+                <span class="reporter-method-output">clicked on login button</span>
+                <span class="reporter-method-output">Test case passed successfully</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">VerifyLoginSuccess</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Entered username</span>
+                <span class="reporter-method-output">Entered password</span>
+                <span class="reporter-method-output">clicked on login button</span>
+                <span class="reporter-method-output"><a href=file://E:\Report\screenshots2016-11-14\VerifyLoginSuccess2016-11-319 15-31-42.jpg>Detailed Report</a></span>
+                <span class="reporter-method-output">Test Case Failed</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -294,48 +307,40 @@ return data;
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
               <div class="chronological-class-name">com.hrm.orange.test.AppTest</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
+              <div class="configuration-method before">
+                <span class="method-name">initializeTestBaseSetup(chrome, http://127.0.0.1/orangehrm-3.3.1/symfony/web/index.php/auth/login)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">22 ms</span>
-              </div> <!-- configuration-class before -->
+              </div> <!-- configuration-method before -->
+              <div class="configuration-method before">
+                <span class="method-name">setup</span>
+                <span class="method-start">31045 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">VerifyLoginFailure</span>
-                <span class="method-start">27 ms</span>
+                <span class="method-start">31049 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">27 ms</span>
-              </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp([TestResult name=VerifyLoginFailure status=SUCCESS method=AppTest.VerifyLoginFailure()[pri:0, instan...)</span>
-                <span class="method-start">11600 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">35458 ms</span>
               </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeTestBaseSetup(chrome, http://127.0.0.1/orangehrm-3.3.1/symfony/web/index.php/auth/login)</span>
+                <span class="method-start">39856 ms</span>
+              </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">VerifyLoginSuccess</span>
-                <span class="method-start">11603 ms</span>
+                <span class="method-start">50110 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">11603 ms</span>
+                <span class="method-name">setup</span>
+                <span class="method-start">50110 ms</span>
               </div> <!-- configuration-method before -->
               <div class="configuration-method after">
-                <span class="method-name">cleanUp([TestResult name=VerifyLoginSuccess status=FAILURE method=AppTest.VerifyLoginSuccess()[pri:0, instan...)</span>
-                <span class="method-start">21830 ms</span>
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53329 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">21831 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">21832 ms</span>
-              </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
