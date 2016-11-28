@@ -3,11 +3,13 @@ package com.hrm.orange.pages;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
+import com.hrm.orange.base.BasePage;
 
 
-public class Dashboard {
+
+public class Dashboard extends BasePage {
 	
-	private  WebDriver driver;
+	private static  WebDriver driver;
 	By DashboardText = By.xpath("//h1[text()='Dashboard']");
 	By ApplyLeaveLink = By.xpath("//span[text()='Apply Leave']");
 	By leaveTab = By.xpath("//*[@id='menu_leave_viewLeaveModule']/b");
@@ -15,8 +17,8 @@ public class Dashboard {
 	
 	public Dashboard(WebDriver driver)
 	{
-		this.driver = driver;
-			
+		Dashboard.driver = driver;
+
 		
 	}
 	

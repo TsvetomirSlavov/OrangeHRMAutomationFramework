@@ -4,9 +4,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hrm.orange.pages.LoginPage;
 
-public class CommonFunctions {
+public class CommonFunctions extends BasePage {
 	
 	private static final By LogOutLink = By.id("welcome");
 
@@ -14,19 +13,19 @@ public class CommonFunctions {
 	
 	private WebDriver driver;
 	
-	public CommonFunctions(WebDriver driver)
+	public CommonFunctions()
 	{
-		this.driver =  driver;
+		super();
 		
 	}
 	
-	public LoginPage LogOut()
+	public BasePage LogOut()
 	{
 		WebDriverWait wait = new WebDriverWait(driver,10);
 		driver.findElement(LogOutLink).click();
 		wait.until(ExpectedConditions.elementToBeClickable(LogOutBtn));
 		driver.findElement(LogOutBtn).click();
-		return new LoginPage(driver);
+		return new BasePage();
 	}
 	
 	

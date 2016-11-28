@@ -1,25 +1,30 @@
-package com.hrm.orange.pages;
+/*package com.hrm.orange.pages;
 
 import org.openqa.selenium.*;
 import org.testng.Reporter;
 
+import com.hrm.orange.base.BasePage;
+import com.hrm.orange.helper.PropertiesFileReader;
 
 
 
 
-public class LoginPage {
+
+public class LoginPage extends BasePage {
 
 	protected  WebDriver driver;
 	//ExtentTest logger;
-	
+	static PropertiesFileReader prreader = new PropertiesFileReader();
+	private static  String appURL = prreader.getPropertyvalues("APPLICATION_URL");
 	public LoginPage(WebDriver driver)
 	{
-		this.driver=driver;
+		//this.driver = driver;
+		super(driver);
 		
 				
 	}
 	
-	
+		
 	By UsernameField = By.id("txtUsername");
 	By PasswordField = By.id("txtPassword");
 	By LoginBtn	= By.id("btnLogin");
@@ -32,7 +37,7 @@ public class LoginPage {
 	{
 		//logger = extent.startTest("Test11");
 		//com.hrm.orange.tests.ORANGE_HRM_TESTS.logger.log(LogStatus.INFO, "In Login function now ");
-		//driver.get(URL);
+		driver.get(appURL);
 		driver.findElement(UsernameField).sendKeys(UserName);
 		Reporter.log("Entered username");
 		driver.findElement(PasswordField).sendKeys(Password);
@@ -62,4 +67,4 @@ public class LoginPage {
 	
 	
 	
-}
+}*/
